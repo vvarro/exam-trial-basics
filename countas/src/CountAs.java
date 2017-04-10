@@ -22,6 +22,7 @@ public class CountAs {
     Path path = Paths.get(FILE_NAME);
     String text;
     text = String.valueOf(Files.readAllLines(path));
+    text = text.toLowerCase();
     char[] charArray = text.toCharArray();
     int counter = 0;
     char character = 'a';
@@ -30,6 +31,6 @@ public class CountAs {
         counter += 1;
       }
     }
-    System.out.println(counter);
+    System.out.println("The number of a letters in the text:" + counter);
   }
 }
