@@ -14,4 +14,9 @@ public class CreateCuboid {
     surface = 2* (a*b + b*c + c*a);
     return surface;
   }
+  public int getVolume(){
+    int volume = 0;
+    volume = a*b*c;
+    return volume;
+  }
 }
