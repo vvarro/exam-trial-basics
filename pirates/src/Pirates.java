@@ -21,16 +21,9 @@ public class Pirates {
     pirates.add(new Pirate("Jack", true, 16));
     pirates.add(new Pirate("Morgan", false, 17));
     pirates.add(new Pirate("Hook", true, 20));
-    System.out.println(PirateList(pirates).toString());
+    PirateList pirateList = new PirateList();
+    System.out.println(pirateList.PirateFinder(pirates));
   }
 
-  public static List<Pirate> PirateList(List<Pirate> pirates) {
-    List<Pirate> richPirate = new ArrayList<>();
-    for (Pirate list : pirates) {
-      if (list.hasWoodenLeg == true && list.gold > 15) {
-        richPirate.add(list);
-      }
-    }
-    return richPirate;
-  }
+
 }
