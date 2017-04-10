@@ -4,29 +4,19 @@ import java.util.Scanner;
 
 public class Seconds {
   public static void main(String[] args) {
-    System.out.println("Please give me the numbers of your list");
-    Scanner input = new Scanner(System.in);
-    ArrayList<Integer> numbers = new ArrayList<>();
-    while(input.hasNextInt()){
-      numbers.add(input.nextInt());
-    }
-    for (int i = 0; i < numbers.size(); i++) {
-      System.out.println("Please enter number");
-      numbers.set(i, input.nextInt());
-    }
+    System.out.println("Please give me the numbers of your list, separeted with ");
+    Scanner scanner = new Scanner(System.in);
+    String input = scanner.nextLine();
+    String[] numbers = input.split(", ");
   }
 
-  // Create a function that takes a list as a parameter,
-  // and returns a new list with every second element from the orignal list
-  // example: [1, 2, 3, 4, 5] should produce [2, 4] - print this result
-  Seconds(1,2,3,4,5)
 
-}
-
-  public Seconds(List<Integer> numbers) {
-    for (int i = 0; i < numbers.size(); i++) {
-      if (numbers.get(i) % 2 == 1) {
-        System.out.println(numbers.get(i));
+  public static void Seconds(List<Integer> nums) {
+    Integer[] nums = new Integer[numbers.size()];
+    nums = numbers.toArray(nums);
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 == 1) {
+        System.out.println(nums[i] + ", ");
       }
     }
   }
