@@ -9,12 +9,8 @@ public class Seconds {
     String input = scanner.nextLine();
     String[] numbers = input.split(", ");
     ArrayList<Integer> nums = new ArrayList<>();
-    ArrayList<Integer> seconds = new ArrayList<>();
     for (String i : numbers) {
       nums.add(Integer.parseInt(i));
-    }
-    for (Integer i : nums) {
-      System.out.println(i);
     }
     Seconds(nums);
   }
@@ -25,7 +21,9 @@ public class Seconds {
       if (nums.get(i) % 2 == 1) {
         seconds.add(nums.get(i));
       }
-      System.out.println(seconds.get(i));
+    }
+    for (Integer i : seconds) {
+      System.out.print(i +",");
     }
   }
 }
